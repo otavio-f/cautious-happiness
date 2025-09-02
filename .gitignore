@@ -24,4 +24,3 @@ pids/
 
 # Environment variables
 .env*
-packages/*/.env*
