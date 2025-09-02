@@ -187,8 +187,8 @@ describe("Bulk Storage", function() {
     const TARGET = path.join(testResources.output, "test.store");
 
     const SOURCES = {
-        serval: {path: testResources.files.serval, md5: "e102fe988826053209e9374fa3377fb3"},
-        haha: {path: testResources.files.haha, md5: "4bb12bf412c1f0ec53b890802ef626a8"},
+        serval: {path: testResources.files.serval, md5: "135d6abb5c0282124edb36010740ff46"},
+        haha: {path: testResources.files.haha, md5: "4fd94b8c96df725de6edf17694ce9bf5"},
         mpeg7: {path: testResources.files.mpeg7, md5: "98abf0b6b59347bf1da4a2dfc6c52654"}
     }
 

@@ -1,9 +1,8 @@
 'use strict';
 
-process.env.NODE_ENV = 'dev';
-
-const fs = require('fs');
+const testResources = require('../../../../tests/resources/resources.js');
 const { expect } = require('chai');
+const fs = require('fs');
 const { BulkStorage } = require('bulk-storage');
 const { User } = require('../../models/user.js');
 const { Media } = require('../../models/media/media.js');
@@ -11,11 +10,10 @@ const { MediaController } = require('../../controllers/MediaController.js');
 const { StorageManager } = require('../../services/BulkStorageManagement.js');
 const { genRandom, hashPassword } = require('../../utils/utils.js');
 const {masterDB} = require("../../db/master.js");
-const testResources = require('../../../../tests/resources/resources.js');
 
 
 describe("Media Controller", function() {
-    this.timeout(1_000_000);
+    this.timeout(30_000);
 
     /**@type { StorageManager } */
     let storageManager;
@@ -52,9 +50,10 @@ describe("Media Controller", function() {
     it("Removes media", async () => {
         const controller = new MediaController(storageManager);
         const source = fs.createReadStream(testResources.files.haha);
-        const media = await controller.store(owner, source, "video/webm");
+        const video = await controller.store(owner, source, "video/webm");
 
-        const hasRemoved = await controller.remove((await media.getMedia()).uuid);
+        const media = await video.getMedia();
+        const hasRemoved = await controller.remove(media.uuid);
 
         const allRecords = await Media.findAll();
         expect(allRecords).to.be.empty;

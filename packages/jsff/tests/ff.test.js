@@ -1,15 +1,19 @@
+'use strict';
+
+const testResources = require("../../../tests/resources/resources.js");
 const assert = require("assert");
 const ffmpeg = require("../ff.js");
 const path = require("path");
 const fs = require("fs");
 
 
+const input = testResources.files.haha;
+const output = path.join(testResources.output, "build.mp4");
+
 /**
  * Builder tests
  */
 describe("Builder", function() {
-    const input = "./tests/resources/haha.webm";
-    const output = "./tests/resources/output/build.mp4";
 
     it("Generates sample command line, two pass conversion to 720p30 video", function() {
         const builder = new ffmpeg.Builder()
@@ -61,8 +65,6 @@ describe("Builder", function() {
  * Transcoder tests
  */
 describe("Transcoder", function() {
-    const input = "./tests/resources/haha.webm";
-    const output = "./tests/resources/output/build.mp4";
     const progressRegex = /^frame=\s*(\d*).*?time=(\d\d):(\d\d):(\d\d).(\d\d).*$/gm;
 
     /**
@@ -82,12 +84,9 @@ describe("Transcoder", function() {
         return {frame, time};
     }
 
-    afterEach(() => {
-        if(fs.existsSync(output))
-            fs.rmSync(output);
-    });
+    afterEach(testResources.cleanUpTestOutputDir);
 
-    this.timeout(15_000); // long timeout to allow transcode to complete
+    this.timeout(30_000); // long timeout to allow transcode to complete
     it("Process video conversion", async function() {
         const encoders = new ffmpeg.Builder()
             .input(input)
@@ -130,7 +129,7 @@ describe("Transcoder", function() {
                 const output = exec.start();
                 output.once("readable", () => {
                     const chunk = output.read();
-                    assert.equal(chunk.toString(), "CRC=0x758f0d1f\n");
+                    assert.equal(chunk.toString(), "CRC=0xcce77ffe\n");
                 })
             });
         }

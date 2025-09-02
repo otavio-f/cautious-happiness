@@ -1,0 +1,27 @@
+# Node.js
+packages/*/node_modules/
+node_modules/
+
+# Logs
+logs/
+*.log
+*.log.*
+npm-debug.log*
+
+# Dependency directories
+pids/
+*.pid
+*.pid.lock
+
+# Optional npm cache directory
+.npm/
+
+# Optional ESLint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Environment variables
+.env*
+packages/*/.env*
