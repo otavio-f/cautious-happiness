@@ -1,0 +1,27 @@
+{
+  "name": "cautious-happiness",
+  "version": "0.0.1",
+  "description": "Set of packages to manage and encrypt collections of files",
+  "main": "index.js",
+  "scripts": {
+    "start-server": "node packages/server/bin/www",
+    "test-all": "mocha -ui bdd packages/*/tests/*",
+    "test-bulk-storage": "mocha -ui bdd packages/bulk-storage/tests/*",
+    "test-jsff": "mocha -ui bdd packages/jsff/tests/*",
+    "test-server": "mocha -ui bdd packages/server/tests/*",
+    "test-endpoints": "echo \"Not implemented yet\""
+  },
+  "keywords": [
+    "Collections",
+    "Encryption"
+  ],
+  "author": "otavio-f",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "mocha": "^11.1.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

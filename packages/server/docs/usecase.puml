@@ -1,0 +1,116 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+:User: as Common
+:Admin: as Admin
+:System: as System
+
+Admin -|> Common
+note top of Admin
+This is just a common user
+with more privileges.
+end note
+
+note right of System
+This is the system component
+end note
+
+package User {
+    (Add user) as (addUser)
+    (Change user details) as (setUser)
+    (View user details) as (getUser)
+    (Remove user) as (remUser)
+}
+
+note bottom of (User)
+Admins can affect themselves and any other Common User
+Common Users can only affect themselves
+end note
+
+note bottom of (addUser)
+Only Admins
+can add Common Users
+end note
+
+Common --> (addUser)
+Common --> (setUser)
+Common --> (getUser)
+Common --> (remUser)
+
+package Media {
+    (Add media) as (addMedia)
+    (Remove media) as (remMedia)
+    (View media details) as (getMedia)
+    (Get media file) as (getFile)
+    (Preview media) as (preview)
+    (View Media thumbnail) as (thumbnail)
+    (Purge/Defragment BulkStorage) as (purge)
+}
+
+(remMedia) ..|> (addMedia)
+(getMedia) ..|> (addMedia)
+(getFile) ..|> (addMedia)
+(preview) ..|> (addMedia)
+(thumbnail) ..|> (addMedia)
+
+note top of (remMedia)
+Common users can only remove
+media added by them.
+Admins can remove any media.
+end note
+
+Common ---> (addMedia)
+Common ---> (remMedia)
+Common ---> (getMedia)
+Common ---> (getFile)
+Common ---> (preview)
+Common ---> (thumbnail)
+System ---> (purge)
+
+package Tag {
+    (Add Tag to Media) as (addTag)
+    (Add Auto/Meta Tags to Media) as (autoTag)
+    (Configure Auto/Meta Tags) as (cfgAutoTag)
+    (Parent Tag) as (parentTag)
+    (Filter Media by Tag) as (fltTag)
+    (Remove Tag from Media) as (remTag)
+    (Change Tag Namespace) as (setNamespace)
+    (Prune orphaned tags/namespaces) as (pruneTag)
+}
+
+Tag ...|> (addMedia)
+
+note "Automatically applied and cannot be altered by users." as AutoTagsNote
+(AutoTagsNote) .. (autoTag)
+(AutoTagsNote) .. (cfgAutoTag)
+
+note bottom of (setNamespace)
+The namespace can also
+be reset to the default
+end note
+
+note bottom of (parentTag)
+Auto adds parent Tag when adding children Tags
+end note
+
+note bottom of (pruneTag)
+Deletes tags not linked to any media
+Also deletes Namespaces not linked to any Tags
+end note
+
+(autoTag) ...|> (cfgAutoTag)
+(parentTag) ...|> (addTag)
+(remTag) ...|> (addTag)
+(setNamespace) ...|> (addTag)
+
+Admin ---> (cfgAutoTag)
+Admin ---> (setNamespace)
+Admin ---> (parentTag)
+System ---> (setNamespace): set to default on adding
+System ---> (pruneTag)
+System ---> (autoTag)
+Common ---> (addTag)
+Common ---> (remTag)
+Common ---> (fltTag)
+
+@enduml

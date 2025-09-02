@@ -1,0 +1,126 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object RecordIndex {
+    uuid: byte[16]
+    path: char[16384]
+}
+
+object Header {
+    start: ulong
+    end: ulong
+    key: byte[32]
+    iv: byte[16]
+}
+
+object TableOfContents {
+    records: FileRecord[16384]
+}
+
+object FileRecord {
+    uuid: byte[16]
+    start: ulong
+    end: ulong
+    iv: byte[16]
+    flags: byte[2]
+    sessionID: byte[32]
+}
+
+object User {
+    id: uint
+    username: string[128]
+    flags: uint
+    lastSeen: Date
+}
+
+object Media {
+    id: uint
+    record: FileRecord
+    owner: User
+    sha256: byte[64]
+    md5: byte[32]
+    mimeType: string[128]
+    mimeSubtype: string[128]
+    dateAdded: uint
+}
+
+object Image {
+    width: ushort
+    height: ushort
+    signature: byte[32]
+}
+
+object Video {
+    width: ushort
+    height: ushort
+    duration: uint
+    frames: uint
+    framerate: float
+    bitrate: float
+    audioBitrate: float
+}
+
+'each bow has 243 bits
+'31 bytes are enough, but I'll round it to 32 and pad with zeros
+object MPEG7CoarseSignature {
+    start: uint
+    end: uint
+    bow0: byte[32]
+    bow1: byte[32]
+    bow2: byte[32]
+    bow3: byte[32]
+    bow4: byte[32]
+}
+
+object Audio {
+    duration: uint
+    bitrate: float
+}
+
+object Text {
+    length: uint
+    words: uint
+}
+
+object Archive {
+    description: string[512]
+}
+
+object Application {
+    description: string[512]
+}
+
+Header "N " ---* RecordIndex
+TableOfContents ---* Header
+FileRecord "N " ---* TableOfContents::records
+Media::record = FileRecord::uuid
+User ---* Media::owner
+Image ---|> Media
+Video ---|> Media
+MPEG7CoarseSignature "N " ---* Video
+Audio ---|> Media
+Text ---|> Media
+Archive ---|> Media
+Application ---|> Media
+
+object Tag {
+    id: uint
+    value: string[128]
+    namespace: Namespace
+}
+
+object Namespace {
+    id: uint
+    value: string[64]
+}
+
+object Implies {
+    tag: uint
+    implied: uint
+}
+
+Tag "N " ---* Media
+Tag::namespace = Namespace::id
+Implies "N " ---* Tag
+
+@enduml

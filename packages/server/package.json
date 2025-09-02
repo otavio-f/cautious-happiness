@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"You are not supposed to run tests from here. Run npm test-server or test-endpoints from the monorepo instead.\""
+  },
+  "dependencies": {
+    "bulk-storage": "file:../bulk-storage",
+    "jsff": "file:../jsff",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "knex": "^3.1.0",
+    "morgan": "~1.9.1",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7"
+  }
+}

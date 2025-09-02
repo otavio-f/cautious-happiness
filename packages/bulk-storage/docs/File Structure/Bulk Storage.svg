@@ -1,0 +1,1576 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="260.11075mm"
+   height="215.69238mm"
+   viewBox="0 0 260.11076 215.69237"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="Bulk Storage.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview95"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4556219"
+     inkscape:cx="801.37569"
+     inkscape:cy="711.37979"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <defs
+     id="defs2">
+    <rect
+       x="185.87465"
+       y="453.50439"
+       width="201.6505"
+       height="25.826235"
+       id="rect6682" />
+    <linearGradient
+       id="linearGradient2939">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2937" />
+    </linearGradient>
+    <symbol
+       id="lock"
+       viewBox="0 0 10000 10000">
+      <title
+         id="title83673">lock</title>
+      <path
+         d="M 320,768 H 832 V 576 C 832,435 717,320 576,320 435,320 320,435 320,576 Z m 832,96 v 576 c 0,53 -43,96 -96,96 H 96 C 43,1536 0,1493 0,1440 V 864 c 0,-53 43,-96 96,-96 h 32 V 576 c 0,-246 202,-448 448,-448 246,0 448,202 448,448 v 192 h 32 c 53,0 96,43 96,96 z"
+         id="path83675" />
+    </symbol>
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="568.79724"
+       height="40.154491"
+       id="rect108180" />
+    <rect
+       x="275.70438"
+       y="409.00714"
+       width="172.00468"
+       height="19.412979"
+       id="rect108186" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="568.79724"
+       height="40.154491"
+       id="rect108188" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect108190" />
+    <rect
+       x="275.70438"
+       y="409.00714"
+       width="167.11275"
+       height="21.266594"
+       id="rect108192" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="383.30734"
+       height="46.452789"
+       id="rect108194" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="319.98206"
+       height="49.862892"
+       id="rect108196" />
+    <rect
+       x="116.99798"
+       y="110.46099"
+       width="234.97945"
+       height="33.898041"
+       id="rect108198" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect116095" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect116097" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect116099" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="571.37628"
+       height="50.641487"
+       id="rect116129" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect672" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="383.30734"
+       height="46.452789"
+       id="rect860" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="568.79724"
+       height="40.154491"
+       id="rect4969" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect4971" />
+    <rect
+       x="275.70438"
+       y="409.00714"
+       width="167.11275"
+       height="21.266594"
+       id="rect4973" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect4996" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect5013" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="319.98206"
+       height="49.862892"
+       id="rect5034" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="568.79724"
+       height="40.154491"
+       id="rect5681" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect5683" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect5685" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect5687" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect5689" />
+    <rect
+       x="275.70438"
+       y="409.00714"
+       width="172.00468"
+       height="19.412979"
+       id="rect5691" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect6443" />
+    <rect
+       x="275.70438"
+       y="409.00714"
+       width="172.00468"
+       height="19.412979"
+       id="rect6445" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect1006" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect2245" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect2247" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect2249" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="333.81412"
+       height="79.299622"
+       id="rect2251" />
+    <rect
+       x="275.70438"
+       y="409.00714"
+       width="167.11275"
+       height="21.266594"
+       id="rect2253" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="568.79724"
+       height="40.154491"
+       id="rect1547" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect1549" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect1551" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect1553" />
+    <rect
+       x="275.70438"
+       y="409.00714"
+       width="172.00468"
+       height="19.412979"
+       id="rect1555" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="568.79724"
+       height="40.154491"
+       id="rect1557" />
+    <rect
+       x="185.87465"
+       y="453.50439"
+       width="201.6505"
+       height="25.826235"
+       id="rect1559" />
+    <rect
+       x="275.70438"
+       y="409.00714"
+       width="172.00468"
+       height="19.412979"
+       id="rect1561" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect1563" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect1565" />
+    <rect
+       x="275.70438"
+       y="409.00714"
+       width="172.00468"
+       height="19.412979"
+       id="rect1567" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="568.79724"
+       height="40.154491"
+       id="rect1569" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect1571" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect1573" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect1575" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect1577" />
+    <rect
+       x="275.70438"
+       y="409.00714"
+       width="167.11275"
+       height="21.266594"
+       id="rect1579" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="319.98206"
+       height="49.862892"
+       id="rect1581" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect1583" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="333.81412"
+       height="79.299622"
+       id="rect1585" />
+    <rect
+       x="116.99798"
+       y="110.46099"
+       width="234.97945"
+       height="33.898041"
+       id="rect1587" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect5572" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect5591" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect5610" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect5629" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="319.98206"
+       height="49.862892"
+       id="rect7175" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect7177" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect7179" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect7181" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect7183" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect7185" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="333.81412"
+       height="79.299622"
+       id="rect7187" />
+    <rect
+       x="116.99798"
+       y="110.46099"
+       width="234.97945"
+       height="33.898041"
+       id="rect7189" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="333.81412"
+       height="79.299622"
+       id="rect7664" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="319.98206"
+       height="49.862892"
+       id="rect7743" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect7745" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect7747" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect7749" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect7751" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect7753" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="333.81412"
+       height="79.299622"
+       id="rect7755" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="319.98206"
+       height="49.862892"
+       id="rect7952" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect7954" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect7956" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="304.17914"
+       height="82.364723"
+       id="rect7958" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="333.81412"
+       height="79.299622"
+       id="rect7960" />
+    <rect
+       x="248.19057"
+       y="152.8371"
+       width="319.98206"
+       height="49.862892"
+       id="rect7991" />
+  </defs>
+  <g
+     id="g7173"
+     transform="matrix(0.99982225,0,0,0.99999832,122.67256,56.510116)"
+     inkscape:label="file-data">
+    <g
+       id="file-data--raw-data"
+       transform="translate(0.01510948,99.550039)"
+       inkscape:label="raw-data">
+      <rect
+         style="fill:#80ffac;fill-opacity:1;stroke:#000000;stroke-width:0.395438;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         id="rect7981"
+         width="99.604111"
+         height="12.104584"
+         x="29.915443"
+         y="35.407764" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-28.33794,-1.5858945)"
+         id="text7987"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect7991);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+           x="323.75195"
+           y="166.99414"
+           id="tspan3747"><tspan
+   style="font-style:italic"
+   id="tspan3745">Raw Data</tspan> - ??? bytes
+</tspan></text>
+    </g>
+    <g
+       id="file-data--media-info"
+       transform="translate(0.01510948,84.550013)"
+       inkscape:label="media-info">
+      <rect
+         style="fill:#ff80d1;fill-opacity:1;stroke:#000000;stroke-width:0.433706;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         id="rect7900"
+         width="99.565842"
+         height="14.566319"
+         x="29.934578"
+         y="35.426899" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-28.33794,-2.9817254)"
+         id="text7906"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect7952);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+           x="316.87695"
+           y="166.99414"
+           id="tspan3751"><tspan
+   style="font-style:italic"
+   id="tspan3749">Media Info</tspan> - 512 bytes
+</tspan><tspan
+           x="286.0918"
+           y="186.99414"
+           id="tspan3753">Specific media type attributes
+</tspan></text>
+    </g>
+    <g
+       id="file-data--checksums"
+       transform="translate(0.01510948,42.549942)"
+       inkscape:label="checksums">
+      <rect
+         style="fill:#a9ff80;fill-opacity:1;stroke:#000000;stroke-width:0.72895;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         id="rect7673"
+         width="99.270599"
+         height="41.271122"
+         x="30.082201"
+         y="35.57452" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-28.33794,-2.2591904)"
+         id="text7679"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect7743);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+           x="314.59961"
+           y="166.99414"
+           id="tspan3757"><tspan
+   style="font-style:italic"
+   id="tspan3755">Checksums</tspan> - 128 bytes
+</tspan></text>
+      <g
+         id="g7739"
+         transform="translate(8.5429096,7.9921793)"
+         inkscape:label="fields">
+        <g
+           id="file-data--checksums--padding"
+           transform="translate(0,22.952445)"
+           inkscape:label="padding">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect7681"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-34.712224,-3.5536353)"
+             id="text7687"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect7745);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="264.63574"
+               y="166.99414"
+               id="tspan3761"><tspan
+   style="font-style:italic"
+   id="tspan3759">padding</tspan> - 76 bytes (random data)</tspan></text>
+        </g>
+        <g
+           id="file-data--checksums--sha256"
+           transform="translate(0,15.30163)"
+           inkscape:label="sha256">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect7711"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-34.712224,-3.5536353)"
+             id="text7717"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect7751);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="309.29199"
+               y="166.99414"
+               id="tspan3765"><tspan
+   style="font-style:italic"
+   id="tspan3763">sha256</tspan> - 32 bytes, hex</tspan></text>
+        </g>
+        <g
+           id="file-data--checksums--md5"
+           transform="translate(0,7.6508145)"
+           inkscape:label="md5">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect7721"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-34.712224,-3.5536353)"
+             id="text7725"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect7753);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="320.79199"
+               y="166.99414"
+               id="tspan3769"><tspan
+   style="font-style:italic"
+   id="tspan3767">md5</tspan> - 16 bytes, hex</tspan></text>
+        </g>
+        <g
+           id="file-data--checksums--crc32"
+           inkscape:label="crc32">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect7729"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-38.320531,-3.5536353)"
+             id="text7735"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect7755);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="335.53125"
+               y="166.99414"
+               id="tspan3773"><tspan
+   style="font-style:italic"
+   id="tspan3771">crc32</tspan> - 4 bytes, hex</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="file-data--file-info"
+       transform="translate(0.01510948,0.54987217)"
+       inkscape:label="info">
+      <rect
+         style="fill:#808cff;fill-opacity:1;stroke:#000000;stroke-width:0.728948;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         id="rect7093"
+         width="99.270599"
+         height="41.271122"
+         x="30.082201"
+         y="35.57452" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-28.33794,-2.2591904)"
+         id="text7097"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect7175);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+           x="326.84961"
+           y="166.99414"
+           id="tspan3777"><tspan
+   style="font-style:italic"
+   id="tspan3775">File Info</tspan> - 256 bytes
+</tspan></text>
+      <g
+         id="g7159"
+         transform="translate(8.5429096,8.2921791)"
+         inkscape:label="fields">
+        <g
+           id="file-data--file-info--padding"
+           transform="translate(0,22.952445)"
+           inkscape:label="padding">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect7099"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-34.712224,-3.5536353)"
+             id="text7105"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect7177);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="259.5459"
+               y="166.99414"
+               id="tspan3781"><tspan
+   style="font-style:italic"
+   id="tspan3779">padding</tspan> - 116 bytes (random data)</tspan></text>
+        </g>
+        <g
+           id="file-data--file-info--length"
+           transform="translate(0,15.30163)"
+           inkscape:label="length">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect7129"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-34.712224,-3.5536353)"
+             id="text7135"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect7183);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="297.18652"
+               y="166.99414"
+               id="tspan3785"><tspan
+   style="font-style:italic"
+   id="tspan3783">size</tspan> - 8 bytes, int64le &gt; 0</tspan></text>
+        </g>
+        <g
+           id="file-data--file-info--timestamp"
+           transform="translate(0,7.6508145)"
+           inkscape:label="timestamp">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect7139"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-34.712224,-3.5536353)"
+             id="text7145"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect7185);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="288.92871"
+               y="166.99414"
+               id="tspan3789"><tspan
+   style="font-style:italic"
+   id="tspan3787">timestamp</tspan> - 4 bytes, uint32</tspan></text>
+        </g>
+        <g
+           id="file-data--file-info--mime"
+           inkscape:label="mime">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect7149"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-38.320531,-3.5536353)"
+             id="text7155"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect7187);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="321.77734"
+               y="166.99414"
+               id="tspan3793"><tspan
+   style="font-style:italic"
+   id="tspan3791">mime</tspan> - 128 bytes, ascii</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="file-data--header"
+       inkscape:label="header">
+      <rect
+         style="fill:#bfbfbf;fill-opacity:1;stroke:#000000;stroke-width:0.822463;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         id="rect7163"
+         width="49.177536"
+         height="7.2122998"
+         x="30.143845"
+         y="28.136162" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-7.3584287,0.34887878)"
+         id="text7169"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect7189);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+           x="193.85449"
+           y="124.61719"
+           id="tspan3797"><tspan
+             style="font-weight:bold"
+             id="tspan3795">File Data</tspan></tspan></text>
+    </g>
+  </g>
+  <g
+     id="g1545"
+     transform="translate(122.66739,-20.22493)"
+     inkscape:label="file-record">
+    <g
+       id="file-record--content"
+       transform="translate(0.01510948,0.54987217)"
+       inkscape:label="content">
+      <rect
+         style="fill:#ff80ff;fill-opacity:1;stroke:#000000;stroke-width:0.871883;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         id="rect1499"
+         width="99.12767"
+         height="59.128117"
+         x="30.153666"
+         y="35.645985" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-28.33794,-2.2591904)"
+         id="text1505"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect1581);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+           x="368.67383"
+           y="166.99414"
+           id="tspan3799">128 bytes
+</tspan></text>
+      <g
+         id="file-record--content--fields"
+         transform="translate(8.5429096,9.2921493)"
+         inkscape:label="fields">
+        <g
+           id="file-record--content--fields--padding"
+           transform="translate(0,38.254076)"
+           inkscape:label="padding">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect5619"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-34.712224,-3.5536353)"
+             id="text5625"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect5629);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="264.63574"
+               y="166.99414"
+               id="tspan3803"><tspan
+   style="font-style:italic"
+   id="tspan3801">padding</tspan> - 78 bytes (random data)</tspan></text>
+        </g>
+        <g
+           id="file-record--content--fields--flags"
+           transform="translate(0,30.603261)"
+           inkscape:label="flags">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect5600"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-34.712224,-3.5536353)"
+             id="text5606"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect5610);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="343.83105"
+               y="166.99414"
+               id="tspan3807"><tspan
+   style="font-style:italic"
+   id="tspan3805">flags</tspan> - 2 bytes</tspan></text>
+        </g>
+        <g
+           id="file-record--content--fields--iv"
+           transform="translate(0,22.952446)"
+           inkscape:label="iv">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect5581"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-34.712224,-3.5536353)"
+             id="text5587"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect5591);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="349.13574"
+               y="166.99414"
+               id="tspan3811"><tspan
+   style="font-style:italic"
+   id="tspan3809">IV</tspan> - 16 bytes</tspan></text>
+        </g>
+        <g
+           id="file-record--content--fields--end"
+           transform="translate(0,15.301631)"
+           inkscape:label="end">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect5562"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-34.712224,-3.5536353)"
+             id="text5568"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect5572);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="297.79199"
+               y="166.99414"
+               id="tspan3815"><tspan
+   style="font-style:italic"
+   id="tspan3813">end</tspan> - 8 bytes, int64le &gt; 0</tspan></text>
+        </g>
+        <g
+           id="file-record--content--fields--start"
+           transform="translate(0,7.650815)"
+           inkscape:label="start">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect1507"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-34.712224,-3.5536353)"
+             id="text1515"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect1583);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="293.6709"
+               y="166.99414"
+               id="tspan3819"><tspan
+   style="font-style:italic"
+   id="tspan3817">start</tspan> - 8 bytes, int64le &gt; 0</tspan></text>
+        </g>
+        <g
+           id="file-record--content--fields--uuid"
+           inkscape:label="uuid">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect1519"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-38.320531,-3.5536353)"
+             id="text1527"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect1585);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="335.42188"
+               y="166.99414"
+               id="tspan3823"><tspan
+   style="font-style:italic"
+   id="tspan3821">uuid</tspan> - 16 bytes, hex</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="file-record--header"
+       inkscape:label="header">
+      <rect
+         style="fill:#bfbfbf;fill-opacity:1;stroke:#000000;stroke-width:0.822463;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         id="rect1535"
+         width="49.177536"
+         height="7.2122998"
+         x="30.143845"
+         y="28.136162" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-7.3584287,0.34887878)"
+         id="text1541"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect1587);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+           x="183.10059"
+           y="124.61719"
+           id="tspan3827"><tspan
+             style="font-weight:bold"
+             id="tspan3825">File Record
+</tspan></tspan></text>
+    </g>
+  </g>
+  <g
+     id="bulk-storage"
+     transform="translate(-29.73262,-27.72493)"
+     inkscape:label="bulk-storage">
+    <g
+       id="table-of-contents"
+       transform="translate(0.01510683,147.82979)">
+      <rect
+         style="fill:#ff8080;fill-opacity:1;stroke:#000000;stroke-width:0.930872;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         id="rect5611"
+         width="129.06912"
+         height="59.193943"
+         x="30.182943"
+         y="35.895336" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-45.991274,-2.6994736)"
+         id="text5619"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;word-spacing:0px;white-space:pre;shape-inside:url(#rect5681);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+           x="461.31641"
+           y="166.99414"
+           id="tspan3831"><tspan
+             style="font-style:italic"
+             id="tspan3829">Table of Contents
+</tspan></tspan><tspan
+           x="382.98828"
+           y="186.99414"
+           id="tspan3835">from <tspan
+   style="font-style:italic"
+   id="tspan3833">TOCInfo-&gt;TOC Start</tspan> to file end</tspan></text>
+      <g
+         id="table-of-contents--sub-sections"
+         transform="translate(27.493398,22.874824)">
+        <rect
+           style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.478198;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+           id="rect5621"
+           width="74.229279"
+           height="31.021803"
+           x="30.2391"
+           y="35.981411" />
+        <g
+           id="table-of-contents--enc-data"
+           transform="translate(-22.505008,-14.411751)">
+          <g
+             id="g5641"
+             transform="translate(37.499994,34.290293)">
+            <rect
+               style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.38721;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+               id="rect5633"
+               width="44.612789"
+               height="7.321053"
+               x="30.052359"
+               y="35.627426" />
+            <text
+               xml:space="preserve"
+               transform="matrix(0.26458333,0,0,0.26458333,-53.612231,-3.7280258)"
+               id="text5639"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect5685);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+                 x="392.65137"
+                 y="166.99414"
+                 id="tspan3839"><tspan
+                   style="font-style:italic"
+                   id="tspan3837">...</tspan></tspan></text>
+          </g>
+          <g
+             id="g5651"
+             transform="translate(37.499994,26.657487)">
+            <rect
+               style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.38721;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+               id="rect5643"
+               width="44.612789"
+               height="7.321053"
+               x="30.052359"
+               y="35.586048" />
+            <text
+               xml:space="preserve"
+               transform="matrix(0.26458333,0,0,0.26458333,-53.431946,-3.359093)"
+               id="text5649"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect5687);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+                 x="353.33496"
+                 y="166.99414"
+                 id="tspan3843"><tspan
+                   style="font-style:italic"
+                   id="tspan3841">File Record</tspan></tspan></text>
+          </g>
+          <g
+             id="g5661"
+             transform="translate(37.499994,19.024677)">
+            <rect
+               style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.38721;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+               id="rect5653"
+               width="44.612789"
+               height="7.321053"
+               x="30.052359"
+               y="35.544678" />
+            <text
+               xml:space="preserve"
+               transform="matrix(0.26458333,0,0,0.26458333,-53.431946,-3.4004633)"
+               id="text5659"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect5689);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+                 x="353.33496"
+                 y="166.99414"
+                 id="tspan3847"><tspan
+                   style="font-style:italic"
+                   id="tspan3845">File Record</tspan></tspan></text>
+          </g>
+        </g>
+        <g
+           id="table-of-contents--enc-method"
+           transform="translate(0.64101419,-1.824871)">
+          <rect
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.545771;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect5665"
+             width="44.954227"
+             height="7.4542289"
+             x="29.631872"
+             y="29.840073" />
+          <use
+             xlink:href="#lock"
+             width="10000"
+             height="10000"
+             style="fill:#000000;stroke:#000000"
+             id="use5667"
+             transform="matrix(0.00295032,0,0,0.00295032,31.732706,31.11252)" />
+          <text
+             xml:space="preserve"
+             id="text5673"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect5691);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             transform="matrix(0.26458333,0,0,0.26458333,-42.072673,-77.25713)"><tspan
+               x="291.80078"
+               y="423.16406"
+               id="tspan3851"> <tspan
+   style="font-style:italic"
+   id="tspan3849">Priv Key, TOC IV</tspan></tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="bulk-data"
+       transform="translate(0.01510683,82.829791)">
+      <rect
+         style="fill:#fff680;fill-opacity:1;stroke:#000000;stroke-width:0.968029;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         id="rect108068"
+         width="129.03197"
+         height="64.031975"
+         x="30.201521"
+         y="35.913914" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-45.900822,-2.6994736)"
+         id="text108076"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect108180);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+           x="492.44141"
+           y="166.99414"
+           id="tspan3855"><tspan
+             style="font-style:italic"
+             id="tspan3853">Bulk Data</tspan></tspan></text>
+      <g
+         id="bulk-data--enc-data-ellipsis"
+         transform="translate(-9.9161442,-3.5624072)">
+        <rect
+           style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.284675;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+           id="rect6677"
+           width="74.422798"
+           height="10.965324"
+           x="67.642334"
+           y="85.259644" />
+        <text
+           xml:space="preserve"
+           transform="matrix(0.26458333,0,0,0.26458333,28.79817,-32.776768)"
+           id="text6680"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;white-space:pre;shape-inside:url(#rect6682);display:inline;fill:#fff280;fill-opacity:1;stroke-width:1.88976;paint-order:stroke markers fill"
+           x="6.875"
+           y="0"><tspan
+             x="279.07129"
+             y="467.66016"
+             id="tspan3859"><tspan
+               style="text-align:center;text-anchor:middle;fill:#000000"
+               id="tspan3857">... </tspan></tspan></text>
+      </g>
+      <g
+         id="bulk-data--enc-data2"
+         transform="translate(27.58385,34.562585)">
+        <rect
+           style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.284675;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+           id="rect6415"
+           width="74.422798"
+           height="10.965324"
+           x="30.142338"
+           y="35.884651" />
+        <g
+           id="g6439"
+           transform="translate(0.64101419,-1.824871)">
+          <rect
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.545771;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect6429"
+             width="44.954227"
+             height="7.4542289"
+             x="29.631872"
+             y="29.840073" />
+          <use
+             xlink:href="#lock"
+             width="10000"
+             height="10000"
+             style="fill:#000000;stroke:#000000"
+             id="use6431"
+             transform="matrix(0.00295032,0,0,0.00295032,31.732706,31.11252)" />
+          <text
+             xml:space="preserve"
+             id="text6437"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect6445);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             transform="matrix(0.26458333,0,0,0.26458333,-47.512134,-77.25713)"><tspan
+               x="312.35938"
+               y="423.16406"
+               id="tspan3863"> <tspan
+   style="font-style:italic"
+   id="tspan3861">Priv Key, IV</tspan></tspan></text>
+        </g>
+        <g
+           id="g6427"
+           transform="translate(-22.50501,-16.786347)">
+          <g
+             id="g6425"
+             transform="translate(37.499994,18.948456)">
+            <rect
+               style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.38721;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+               id="rect6417"
+               width="44.612789"
+               height="7.321053"
+               x="30.052359"
+               y="35.544678" />
+            <text
+               xml:space="preserve"
+               transform="matrix(0.26458333,0,0,0.26458333,-53.431946,-3.4004633)"
+               id="text6423"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect6443);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+                 x="363.16699"
+                 y="166.99414"
+                 id="tspan3867"><tspan
+                   style="font-style:italic"
+                   id="tspan3865">File Data</tspan></tspan></text>
+          </g>
+        </g>
+      </g>
+      <g
+         id="bulk-data--enc-data1"
+         transform="translate(27.58385,15.312588)">
+        <rect
+           style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.284675;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+           id="rect116114"
+           width="74.422798"
+           height="10.965324"
+           x="30.142338"
+           y="35.884651" />
+        <g
+           id="g116093"
+           transform="translate(-22.50501,-16.786347)">
+          <g
+             id="g116091"
+             transform="translate(37.499994,18.948456)">
+            <rect
+               style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.38721;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+               id="rect116085"
+               width="44.612789"
+               height="7.321053"
+               x="30.052359"
+               y="35.544678" />
+            <text
+               xml:space="preserve"
+               transform="matrix(0.26458333,0,0,0.26458333,-53.431946,-3.4004633)"
+               id="text116089"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect116099);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+                 x="363.16699"
+                 y="166.99414"
+                 id="tspan3871"><tspan
+                   style="font-style:italic"
+                   id="tspan3869">File Data</tspan></tspan></text>
+          </g>
+        </g>
+        <g
+           id="g108112"
+           transform="translate(0.64101419,-1.824871)">
+          <rect
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.545771;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect108102"
+             width="44.954227"
+             height="7.4542289"
+             x="29.631872"
+             y="29.840073" />
+          <use
+             xlink:href="#lock"
+             width="10000"
+             height="10000"
+             style="fill:#000000;stroke:#000000"
+             id="use108104"
+             transform="matrix(0.00295032,0,0,0.00295032,31.732706,31.11252)" />
+          <text
+             xml:space="preserve"
+             id="text108110"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect108186);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             transform="matrix(0.26458333,0,0,0.26458333,-47.512134,-77.25713)"><tspan
+               x="312.35938"
+               y="423.16406"
+               id="tspan3875"> <tspan
+   style="font-style:italic"
+   id="tspan3873">Priv Key, IV</tspan></tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="toc-info"
+       transform="translate(-0.07611621,30.458637)">
+      <rect
+         style="fill:#80d7ff;fill-opacity:1;stroke:#000000;stroke-width:1.22649;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         id="rect108118"
+         width="128.77351"
+         height="51.273506"
+         x="30.421974"
+         y="35.914303" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-46.143894,-2.6994736)"
+         id="text108124"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect108188);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+           x="317.03906"
+           y="166.99414"
+           id="tspan3879"><tspan
+   style="font-style:italic"
+   id="tspan3877">TOCInfo</tspan> - 512 bytes encrypted / 256 bytes decrypted</tspan></text>
+      <g
+         id="toc-info--sub-sections"
+         transform="translate(27.340778,17.662684)">
+        <g
+           id="toc-info--toc-comment"
+           transform="translate(0,22.952444)">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect996"
+             width="74.842072"
+             height="7.1508145"
+             x="30.174593"
+             y="35.916908" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-38.171299,-3.5536353)"
+             id="text1002"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect1006);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="273.71777"
+               y="166.99414"
+               id="tspan3883"><tspan
+   style="font-style:italic"
+   id="tspan3881">Comment</tspan> - 200 bytes (random)</tspan></text>
+        </g>
+        <g
+           id="toc-info--toc-start"
+           transform="translate(0,15.301629)">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect5003"
+             width="74.842072"
+             height="7.1508145"
+             x="30.174593"
+             y="35.916908" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-38.171299,-3.5536353)"
+             id="text5009"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect5013);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="268.03809"
+               y="166.99414"
+               id="tspan3887"><tspan
+   style="font-style:italic"
+   id="tspan3885">TOC Start</tspan> - 8 bytes (int64le &gt; 0)</tspan></text>
+        </g>
+        <g
+           id="toc-info--toc-iv"
+           transform="translate(0,7.6508145)">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect4986"
+             width="74.842072"
+             height="7.1508145"
+             x="30.174593"
+             y="35.916908" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-38.171299,-3.5536353)"
+             id="text4992"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect4996);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="328.57715"
+               y="166.99414"
+               id="tspan3891"><tspan
+   style="font-style:italic"
+   id="tspan3889">TOC IV</tspan> - 16 bytes</tspan></text>
+        </g>
+        <g
+           id="toc-info--priv-key">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect108126"
+             width="74.842072"
+             height="7.1508145"
+             x="30.174593"
+             y="35.916908" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-38.171299,-3.5536353)"
+             id="text108130"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect108190);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="324.22949"
+               y="166.99414"
+               id="tspan3895"><tspan
+   style="font-style:italic"
+   id="tspan3893">Priv Key</tspan> - 32 bytes</tspan></text>
+        </g>
+        <g
+           id="toc-info--enc-method"
+           transform="translate(0.64101419,-1.824871)">
+          <rect
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect108132"
+             width="37.5"
+             height="7.5"
+             x="29.608986"
+             y="29.817186" />
+          <use
+             xlink:href="#lock"
+             width="10000"
+             height="10000"
+             style="fill:#000000;stroke:#000000"
+             id="use108134"
+             transform="matrix(0.00295032,0,0,0.00295032,33.688817,31.11252)" />
+          <text
+             xml:space="preserve"
+             id="text108140"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect108192);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             transform="matrix(0.26458333,0,0,0.26458333,-45.016262,-77.322168)"><tspan
+               x="310.31934"
+               y="423.16406"
+               id="tspan3899"> <tspan
+   style="font-style:italic"
+   id="tspan3897">Master Key</tspan></tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="signature"
+       transform="translate(0.01510948,0.54987217)">
+      <rect
+         style="fill:#80ff80;fill-opacity:1;stroke:#000000;stroke-width:1.3021;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         id="rect108158"
+         width="128.69791"
+         height="28.697906"
+         x="30.368553"
+         y="35.860867" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-13.337937,-2.2591904)"
+         id="text108166"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect108196);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+           x="331.05664"
+           y="166.99414"
+           id="tspan3903"><tspan
+   style="font-style:italic"
+   id="tspan3901">Signature</tspan> - 8 bytes
+</tspan></text>
+      <g
+         id="signature--sub-sections"
+         transform="translate(23.542913,9.2921493)">
+        <g
+           id="signature--version"
+           transform="translate(0,7.6508145)">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect2211"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-34.712224,-3.5536353)"
+             id="text2217"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect2249);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="300.26465"
+               y="166.99414"
+               id="tspan3909"><tspan
+   style="font-style:italic"
+   id="tspan3905">Version</tspan> - &quot;<tspan
+   style="font-weight:bold"
+   id="tspan3907">XYYZZZ</tspan>&quot;, hex</tspan></text>
+        </g>
+        <g
+           id="signature--magic">
+          <rect
+             style="fill:#fffefe;fill-opacity:1;stroke:#000000;stroke-width:0.52247;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+             id="rect2221"
+             width="81.977531"
+             height="7.128345"
+             x="30.185827"
+             y="35.928143" />
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,-38.320531,-3.5536353)"
+             id="text2227"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect2251);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+               x="312.89062"
+               y="166.99414"
+               id="tspan3915"><tspan
+   style="font-style:italic"
+   id="tspan3911">Magic - &quot;</tspan><tspan
+   style="font-weight:bold"
+   id="tspan3913">BULK#&quot;</tspan>, latin1</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="header">
+      <rect
+         style="fill:#bfbfbf;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         id="rect108170"
+         width="74.53476"
+         height="7.0347624"
+         x="30.232613"
+         y="28.22493" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,5.3417793,0.34887878)"
+         id="text108174"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:serif;-inkscape-font-specification:serif;text-align:center;white-space:pre;shape-inside:url(#rect108198);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"><tspan
+           x="175.65137"
+           y="124.61719"
+           id="tspan3919"><tspan
+             style="font-weight:bold"
+             id="tspan3917">Bulk Storage
+</tspan></tspan></text>
+    </g>
+  </g>
+</svg>

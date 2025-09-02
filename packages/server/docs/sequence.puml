@@ -1,0 +1,155 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor User
+boundary UI
+control System
+queue BulkStorage
+database TableOfContents
+database MasterDatabase
+
+== Initialization ==
+
+User -> UI: Open App
+UI --> User: Ask Password
+UI -> System: Authenticate Master Key
+System -> BulkStorage: Decrypt Headers
+BulkStorage -> BulkStorage: Generate SessionKey
+BulkStorage -> MasterDatabase: Decrypt MasterDB
+MasterDatabase --> System: Index of BulkStorage files
+BulkStorage -> TableOfContents: Decrypt TableOfContents
+TableOfContents --> BulkStorage: File Records with SessionID derived from SessionKey
+BulkStorage --> System: BulkStorage OPEN and READY
+System -> System: Generate Session Token
+System --> UI: Session Token as JSON
+UI --> User: Main interface
+
+== Filter and Sort Media ==
+
+User -> UI: Input Filter and Sort Query with <SessionID>s
+UI -> System: Filter for query with Session Token
+System -> System: Validate Session Token
+UI -> System: Filter and sort media <SessionID>s by query
+System -> TableOfContents: Filter and sort media <SessionID>s
+TableOfContents --> System: List of filtered and sorted <SessionID>s
+System --> UI: Result as JSON
+UI --> User: Present results
+
+== View Media ==
+
+User -> UI: Fetch SessionID
+UI -> System: Search for query with Session Token
+System --> System: Validation Session Token OK
+System -> TableOfContents: Find Record <Start> and <End> with <SessionID>
+TableOfContents -> BulkStorage: Decrypt Record with <Start> and <End> into stream
+BulkStorage --> System: Stream decrypted file
+System --> UI: Result as URL
+UI --> User: Download
+
+== Delete Media ==
+
+User -> UI: Delete by <SessionID>
+UI -> System: Delete by <SessionID> with Session Token
+System -> System: Validate Session Token
+System -> TableOfContents: Delete Record with <SessionID>
+TableOfContents --> System: Record with <SessionID> flagged as Deleted
+System --> UI: Result as JSON
+UI --> User: Present result
+
+== UnDelete Media ==
+
+User -> UI: UnDelete by <SessionID>
+UI -> System: UnDelete by <SessionID> with Session Token
+System -> System: Validate Session Token
+System -> TableOfContents: Remove deleted flag from Record with <SessionID>
+TableOfContents --> System: Deleted flag removed from Record with <SessionID>
+System --> UI: Result as JSON
+UI --> User: Present result
+
+== Add Media ==
+
+User -> UI: Add file from URL
+UI -> System: Fetch and add file at URL with Session Token
+System --> System: Validation Session Token OK
+System -> BulkStorage: Stream file from URL
+BulkStorage -> BulkStorage: Generate key
+BulkStorage -> BulkStorage: Encrypt file
+BulkStorage -> BulkStorage: Append to storage
+BulkStorage --> System: Stream progress
+System --> UI: Generate URL to track progress
+UI --> User: Present Progress
+BulkStorage --> TableOfContents: Create Record
+BulkStorage --> TableOfContents: SessionID of added file
+System --> UI: Result as JSON
+UI --> User: Present result
+
+== Add Tag ==
+
+System -> MasterDatabase: Add Tag with <name> and <namespace>
+MasterDatabase --> System: Tag <id>
+System --> UI: Result as JSON
+UI --> User: Present result
+
+== Search Tag ==
+
+User -> UI: Search for Tag with <name> filter
+UI -> System: Search for Tag with Session Token
+System -> System: Validate Token OK
+System -> MasterDatabase: Find Tag with partial name or namespace like <name>
+MasterDatabase --> System: Search results
+System --> UI: Search results as JSON
+UI -> User: Present results
+
+== Search Media by Tag ==
+
+User -> UI: Search media <SessionID>s by Tags <ID>
+UI -> System: Search media <SessionID> linked with Tags <ID>s
+System -> System: Validate Session Token
+System -> MasterDatabase: Search media <ID>s linked with Tags <ID>s
+MasterDatabase --> System: Search results
+System -> TableOfContents: Find media <SessionID>s by their <ID>s
+TableOfContents --> System: Media <SessionID>s
+System --> UI: Results as JSON
+UI --> User: Present results
+
+== Untag Media ==
+
+User -> UI: Remove Tag with <ID> from Media with <SessionID>
+UI -> System: Unlink Tag from Media with Session Token
+System -> System: Validate Session Token
+System -> TableOfContents: Find Media <UUID> by <SessionID>
+TableOfContents --> System: Media <UUID>
+System -> MasterDatabase: Unlink tag with <ID> to Record with <UUID>
+MasterDatabase -> MasterDatabase: Remove orphan Tag/Namespace
+MasterDatabase --> System: Unlink Tag OK
+System --> UI: Result as JSON
+UI --> User: Present result
+
+== Tag Media ==
+
+User -> UI: Add Tag with <ID> to Media with <SessionID>
+UI -> System: Add Tag to Media with Session Token
+System --> System: Validation Session Token OK
+System -> TableOfContents: Find Media <uuid> with <SessionID>
+TableOfContents --> System: Record <uuid>
+System -> MasterDatabase: Link tag with <id> to Record with <uuid>
+MasterDatabase --> System: Link Tag to Record OK
+System --> UI: Result as JSON
+UI --> User: Present result
+
+== Shutdown ==
+
+User -> UI: Close app
+UI -> System: Signal shutdown
+System -> BulkStorage: Signal close
+BulkStorage -> BulkStorage: Wait for pending writes
+BulkStorage -> TableOfContents: Encrypt TableOfContents with Private Key
+TableOfContents --> BulkStorage: Append encrypted TableOfContents
+BulkStorage --> System: Storage is closed
+System -> MasterDatabase: Update files listing
+MasterDatabase --> System: Database is closed
+System --> UI: Shutdown OK
+UI --> User: Closed OK
+
+@enduml

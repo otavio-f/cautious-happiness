@@ -1,0 +1,10 @@
+{
+  "name": "bulk-storage",
+  "version": "0.3.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -ui bdd tests/*"
+  },
+  "private": true
+}
