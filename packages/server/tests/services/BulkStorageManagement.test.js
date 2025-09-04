@@ -1,6 +1,6 @@
 'use strict';
 
-const { expect} = require('chai');
+const { expect } = require('chai');
 const testResources = require('../../../../tests/resources/resources.js');
 const fs = require('fs');
 const crypto = require('crypto');

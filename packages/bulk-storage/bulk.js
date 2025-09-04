@@ -2,7 +2,22 @@
 
 const crypto = require("crypto");
 const fs = require("fs");
+const crc32 = require("crc/calculators/crc32");
 const { FileRecord, Header } = require('./filerecord.js');
+
+
+/**
+ * Converts a number to buffer
+ * @param {number} num
+ * @returns {Buffer}
+ */
+const intToBuf = (num) => {
+    let repr = num.toString(16);
+    if(repr.length%2 !== 0)
+        repr = '0' + repr;
+
+    return Buffer.from(repr);
+}
 
 /**
  *
@@ -57,26 +72,33 @@ BulkStorage.prototype.add = async function(source) {
         throw new Error("Storage is closed!");
 
     const record = FileRecord.create({start: this.headers.start});
-
-    // create encryptor
-    const cipher = record.getEncryptor();
-    let encryptedLength = 0;
-    cipher.on("data", (chunk) => {
-        encryptedLength += chunk.byteLength;
-    });
+    let crc = 0;
+    const md5 = crypto.createHash('md5');
+    const sha256 = crypto.createHash('sha256');
 
     // create output stream
     const output = fs.createWriteStream(null,
-        {fd: this.fd, highWaterMark: 64*1024, autoClose: false, start: Number(this.headers.start)}
+        {fd: this.fd, highWaterMark: 64*1024, autoClose: false, start: Number(record.start)}
     );
 
-    const writer = source.pipe(cipher).pipe(output);
+    source.on("data", chunk => {
+        if(chunk === null)
+            return;
+        crc = crc32(chunk, crc);
+        md5.update(chunk);
+        sha256.update(chunk);
+    });
+
+    const writer = source.pipe(record.getEncryptor()).pipe(output);
 
     return new Promise((resolve, reject) => {
         let finished = false;
         // create new record after finishing encryption
         writer.once("finish", () => {
-            record.end = record.start + BigInt(encryptedLength);
+            record.crc = intToBuf(crc);
+            record.md5 = md5.digest();
+            record.sha = sha256.digest();
+            record.end = BigInt(writer.pos);
             this.records.push(record);
             this.headers.start = record.end;
             finished = true;
@@ -85,9 +107,6 @@ BulkStorage.prototype.add = async function(source) {
 
         // abort and remove written data after error
         writer.once("error", () => {
-            // do nothing if managed to finish
-            if(finished)
-                return;
             fs.ftruncateSync(this.fd, Number(record.start));
             return reject(new Error("BulkStorage: An error occurred while processing the file."));
         });
@@ -113,7 +132,7 @@ BulkStorage.prototype.get = function(uuid) {
         {
             fd: this.fd,
             start: Number(record.start),
-            end: Number(record.end),
+            end: Number(record.end) - 1, // sub 1 because inclusive end causes decryption to fail
             highWaterMark: 64*1024
         });
     return reader.pipe(record.getDecryptor());

@@ -47,6 +47,7 @@ describe("Bulk Storage", function() {
             const reader = fs.createReadStream(src.path);
             const record = await storage.add(reader);
             expect(record).to.be.instanceOf(FileRecord);
+            expect(record.md5.toString('hex')).to.equal(src.md5);
         }
 
         expect(storage.records).to.have.length(sources.length);
