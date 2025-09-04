@@ -251,4 +251,6 @@ BulkStorage.open = (path, privateKey, password) => {
     return new BulkStorage(header, toc, fd);
 }
 
+BulkStorage.genKey = Header.genKey;
+
 module.exports = exports = { BulkStorage };
