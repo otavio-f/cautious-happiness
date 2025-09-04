@@ -26,22 +26,6 @@ const Media = masterDB.define('Media', {
             }
         }
     },
-    sha256: {
-        type: DataTypes.STRING(64), // hex digest
-        allowNull: false,
-        unique: true,
-        validate: {
-            is: /^[0-9a-f]{64}$/
-        }
-    },
-    md5: {
-        type: DataTypes.STRING(32), // hex digest
-        allowNull: false,
-        unique: true,
-        validate: {
-            is: /^[0-9a-f]{32}$/
-        }
-    },
     mediaType: {
         type: DataTypes.STRING(32), // first part of mime
         allowNull: false,
@@ -50,10 +34,6 @@ const Media = masterDB.define('Media', {
         type: DataTypes.STRING(128), // second part of mime
         allowNull: false
     },
-    dateAdded: {
-        type: DataTypes.INTEGER, // time inserted, epoch time in milliseconds
-        allowNull: false,
-    }
 });
 
 Media.belongsTo(User, {

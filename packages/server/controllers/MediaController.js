@@ -38,28 +38,6 @@ const saveTempFile = async (source, folder) => {
 }
 
 /**
- * Computes the hashes of the source file
- * @param {ReadStream} source
- * @returns {Promise<[string, string]>} computed md5 and sha256 of the source
- */
-const getHashes = (source) => {
-    const md5 = crypto.createHash("md5");
-    const sha256 = crypto.createHash("sha256");
-
-    source.pipe(md5);
-    source.pipe(sha256);
-
-    return new Promise((resolve, reject) => {
-        source.on('end', () => {
-            resolve([md5.digest('hex'), sha256.digest('hex')]);
-        });
-        source.on("error", () => {
-            reject("An error occurred while processing the file.");
-        });
-    });
-}
-
-/**
  * Gathers information and builds a video model
  * @param source
  * @param root
@@ -157,7 +135,6 @@ exports.MediaController = function (bulkStorageManager) {
 
         source.pause();
         const tempFile = saveTempFile(source, tempDir??process.env.TEMP_DIR);
-        const hashes = getHashes(source);
         const bulkStorage = bulkStorageManager.addFile(source);
 
         /** @type {Promise<Video|Audio|Image>} */
@@ -187,11 +164,8 @@ exports.MediaController = function (bulkStorageManager) {
         //  created details
         const tempFilePath = await tempFile;
         const record = await bulkStorage;
-        const [md5, sha256] = await hashes;
         let newMedia = Media.create({
             uuid: record.uuid,
-            sha256: sha256,
-            md5: md5,
             mediaType: mimeType.toLowerCase(),
             fileType: mimeSubType.toLowerCase(),
             dateAdded: Date.now(),
