@@ -24,3 +24,6 @@ pids/
 
 # Environment variables
 .env*
+
+# Test results
+./tests/resources/output/
