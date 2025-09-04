@@ -6,181 +6,8 @@ const testResources = require('../../../tests/resources/resources.js');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
-const { BulkStorage, FileRecord, RecordFlags, FlagState, Header, TableOfContents } = require("../bulk.js");
-
-
-/**
- * Generates a File Record with random data
- * @returns {FileRecord}
- */
-const genRecord = () => {
-    const start = crypto.randomInt(0, 2**32);
-    const end = crypto.randomInt(start, 2**32);
-    const iv = crypto.randomBytes(16);
-
-    return new FileRecord(
-        Buffer.from(crypto.randomUUID().toString().replace(/-/g, '').toLowerCase(), 'hex'),
-        start,
-        end,
-        iv,
-        FlagState.NONE
-    );
-}
-
-describe("File Flags", function() {
-    it("sets normal flag by default", function() {
-        const flag = new RecordFlags();
-
-        expect(flag.isNormal()).ok;
-    });
-
-    it("is normal when no other flag is set", function() {
-        const flag = new RecordFlags();
-
-        expect(flag.isNormal()).ok;
-        expect(flag.isBusy()).not.ok;
-        expect(flag.isDeleted()).not.ok;
-    });
-
-    it("becomes normal when all flags are unset", function() {
-        const flag = new RecordFlags();
-
-        flag.toggleDeleted();
-        flag.toggleBusy();
-        flag.toggleDeleted();
-        flag.toggleBusy();
-
-        expect(flag.isNormal()).ok;
-    });
-
-    it("is not normal when any other flag is set", function() {
-        const flag = new RecordFlags();
-
-        flag.toggleDeleted();
-
-        expect(flag.isNormal()).not.ok;
-    });
-
-    it("sets busy flag", function() {
-        const flag = new RecordFlags();
-
-        flag.toggleBusy();
-
-        expect(flag.isBusy()).ok;
-    });
-
-    it("sets deleted flag", function() {
-        const flag = new RecordFlags();
-
-        flag.toggleDeleted();
-
-        expect(flag.isDeleted()).ok;
-    });
-
-    it("unsets busy flag", function() {
-        const flag = new RecordFlags();
-
-        flag.toggleBusy();
-        flag.toggleBusy()
-
-        expect(flag.isBusy()).not.ok;
-    });
-
-    it("unsets deleted flag", function() {
-        const flag = new RecordFlags();
-
-        flag.toggleDeleted();
-        flag.toggleDeleted();
-
-        expect(flag.isDeleted()).not.ok;
-    });
-
-    it("sets multiple tags", function() {
-        const flag = new RecordFlags();
-
-        flag.toggleDeleted();
-        flag.toggleBusy();
-
-        expect(flag.isDeleted()).ok;
-        expect(flag.isBusy()).ok;
-    });
-
-    it("unsets partially", function() {
-        const flag = new RecordFlags();
-
-        flag.toggleDeleted();
-        flag.toggleBusy();
-        flag.toggleBusy();
-
-        expect(flag.isDeleted()).ok;
-        expect(flag.isBusy()).not.ok;
-    });
-});
-
-describe("File Record", function() {
-    it('imports and exports records from/to binary data', () => {
-        const record = genRecord();
-
-        const buf = record.toBinary();
-        const result = FileRecord.from(buf);
-
-        expect(result).to.deep.equal(record);
-    });
-
-    it('imports and exports many records from/to binary data', () => {
-        const records = Array.from({length: 16}, genRecord);
-
-        const buf = Buffer.concat(records.map(record => record.toBinary()));
-        const result = FileRecord.many(buf);
-
-        expect(result).deep.equal(records);
-    });
-
-});
-
-describe("Bulk Header", function() {
-    // key gen takes a while, so be patient
-
-    const pw = crypto.randomBytes(64).toString('latin1');
-    const {publicKey, privateKey} = BulkStorage.genKey(pw);
-
-    it("imports and exports headers from/to binary data", function() {
-        const header = new Header(
-            crypto.randomBytes(32),
-            crypto.randomBytes(16),
-            crypto.randomInt(2**32)
-        );
-
-        const buf = header.toBinary(publicKey);
-
-        expect(Header.from(buf, privateKey, pw)).to.deep.equal(header);
-    });
-});
-
-describe("Table of Contents", function() {
-    this.timeout(10_000); // long timeout to compensate for decryption/encryption being too heavy
-
-    let records;
-
-    beforeEach(() => {
-        records = Array.from(
-            {length: 64},
-            () => { // mano que porcaria devagar
-                return genRecord();
-            }
-        );
-    });
-
-    it("imports and exports toc from/to binary data", function() {
-        const pk = crypto.randomBytes(32);
-        const iv = crypto.randomBytes(16);
-
-        const bin = TableOfContents.toBinary(records, pk, iv);
-        const tocFromBinary = TableOfContents.from(bin, pk, iv);
-
-        expect(tocFromBinary).to.be.deep.equal(records);
-    });
-});
+const { BulkStorage } = require('../bulk.js');
+const { FileRecord, Header } = require('../filerecord.js');
 
 describe("Bulk Storage", function() {
     // The result of all tests are contained on this file
@@ -193,7 +20,7 @@ describe("Bulk Storage", function() {
     }
 
     const pw = crypto.randomBytes(64).toString('latin1');
-    const {publicKey, privateKey} = BulkStorage.genKey(pw);
+    const {publicKey, privateKey} = Header.genKey(pw);
 
     beforeEach(() => {
         testResources.cleanUpTestOutputDir();
@@ -347,8 +174,11 @@ describe("Bulk Storage", function() {
 
     it("reads insterted file after reopening", async () => {
         let storage = BulkStorage.create(TARGET, publicKey);
-        const source = fs.createReadStream(SOURCES.serval.path);
+        let source = fs.createReadStream(SOURCES.serval.path);
         const record = await storage.add(source);
+        source = fs.createReadStream(SOURCES.mpeg7.path);
+        await storage.add(source);
+
         storage.sync(publicKey);
         storage.close();
 
