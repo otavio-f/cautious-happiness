@@ -26,4 +26,4 @@ pids/
 .env*
 
 # Test results
-./tests/resources/output/
+tests/resources/output/
