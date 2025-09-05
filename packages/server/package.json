@@ -8,14 +8,17 @@
   },
   "dependencies": {
     "bulk-storage": "file:../bulk-storage",
-    "jsff": "file:../jsff",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^16.6.1",
     "express": "^4.21.2",
+    "jsff": "file:../jsff",
     "knex": "^3.1.0",
     "morgan": "~1.9.1",
     "sequelize": "^6.37.3",
     "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.4"
   }
 }

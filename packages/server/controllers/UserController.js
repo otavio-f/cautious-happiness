@@ -52,7 +52,6 @@ UserController.prototype.changePassword = async (user, newPassword) => {
 
 /**
  * Finds user by id
- * The user will be logged out
  * @param {number} id
  * @return {Promise<User|null>}
  */
@@ -64,7 +63,6 @@ UserController.prototype.getById = (id) => {
 
 /**
  * Gets user by username
- * The user will be logged out
  * @param {string} username
  * @return {Promise<User|null>}
  */

@@ -77,4 +77,4 @@ SessionManager.prototype.validateToken = function(token) {
     return this.tokens.find(user => user.token === token);
 }
 
-exports.SessionManager = SessionManager;
+exports.SessionManager = new SessionManager();

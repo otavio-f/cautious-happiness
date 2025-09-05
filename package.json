@@ -9,7 +9,7 @@
     "test-bulk-storage": "mocha -ui bdd packages/bulk-storage/tests/*",
     "test-jsff": "mocha -ui bdd packages/jsff/tests/*",
     "test-server": "mocha -ui bdd packages/server/tests/*",
-    "test-endpoints": "echo \"Not implemented yet\""
+    "test-e2e": "echo \"Not implemented yet\""
   },
   "keywords": [
     "Collections",
