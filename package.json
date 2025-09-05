@@ -19,7 +19,8 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.5.0",
-    "mocha": "^11.1.0"
+    "mocha": "^11.1.0",
+    "why-is-node-running": "^2.3.0"
   },
   "workspaces": [
     "packages/*"

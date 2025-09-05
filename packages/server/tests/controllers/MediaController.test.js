@@ -27,7 +27,7 @@ describe("Media Controller", function() {
         const {publicKey, privateKey} = BulkStorage.genKey(password);
         storageManager = await StorageManager.start(testResources.output, privateKey, password, publicKey);
 
-        const {hash: userPass, salt} = hashPassword("12345");
+        const {hash: userPass, salt} = await hashPassword("12345");
         owner = await User.create({
             username: "test",
             password: userPass,

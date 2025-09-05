@@ -32,7 +32,7 @@ UserController.prototype.create = async (username, password, creator, level) => 
     }
 
     // TODO: Password validation
-    const {hash, salt} = hashPassword(password);
+    const {hash, salt} = await hashPassword(password);
     return User.create({username, password: hash, salt, level: newLevel});
 }
 
@@ -43,7 +43,7 @@ UserController.prototype.create = async (username, password, creator, level) => 
  * @param {string} newPassword
  */
 UserController.prototype.changePassword = async (user, newPassword) => {
-    const {hash, salt} = hashPassword(newPassword);
+    const {hash, salt} = await hashPassword(newPassword);
     user.password = hash;
     user.salt = salt;
 

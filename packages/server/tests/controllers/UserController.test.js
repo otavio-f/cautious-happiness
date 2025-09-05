@@ -14,7 +14,7 @@ describe('User Controller', function() {
 
     beforeEach(async function() {
         await masterDB.sync({force: true});
-        const secret = hashPassword("0000.0000");
+        const secret = await hashPassword("0000.0000");
         await User.create({
             username: "test",
             password: secret.hash,
@@ -58,7 +58,7 @@ describe('User Controller', function() {
 
     it('Fails to create an user when the creator has no such privileges', async function() {
         const control = new UserController();
-        const secret = hashPassword("0000.0000");
+        const secret = await hashPassword("0000.0000");
         const commonUser = await User.create({
             username: "unprivileged",
             password: secret.hash,
@@ -109,7 +109,7 @@ describe('User Controller', function() {
         const oldPassword = admin.password;
 
         await control.changePassword(admin, "********");
-        const {hash: newPassword} = hashPassword("********", admin.salt);
+        const {hash: newPassword} = await hashPassword("********", admin.salt);
         expect(oldPassword).to.not.deep.equal(admin.password);
         expect(newPassword).to.deep.equal(admin.password);
     });

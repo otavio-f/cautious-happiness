@@ -27,7 +27,7 @@ SessionManager.prototype.login = async function(username, password, revokeTime){
     if(user === null) // no user with name
         return null;
 
-    const {hash} = hashPassword(password, user.salt);
+    const {hash} = await hashPassword(password, user.salt);
     if(hash.compare(user.password) !== 0) // incorrect password
         return null;
 
@@ -46,6 +46,7 @@ SessionManager.prototype.login = async function(username, password, revokeTime){
 SessionManager.prototype.logout = function (token) {
     const toDelete = this.tokens.findIndex(user => user.token === token);
     if(toDelete !== -1) {
+        clearTimeout(this.tokens[toDelete].timeout);
         this.tokens.splice(toDelete, 1);
         return true;
     }
@@ -75,6 +76,16 @@ SessionManager.prototype.refresh = function (token, revokeTime) {
  */
 SessionManager.prototype.validateToken = function(token) {
     return this.tokens.find(user => user.token === token);
+}
+
+/**
+ * Clears the users logged in
+ */
+SessionManager.prototype.shutdown = function() {
+    while(this.tokens.length > 0) {
+        const user = this.tokens.pop();
+        clearTimeout(user.timeout);
+    }
 }
 
 exports.SessionManager = new SessionManager();

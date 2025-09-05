@@ -10,14 +10,19 @@ const crypto = require('crypto');
  * Hashes a password
  * @param {string} password the password, latin1 encoded
  * @param {Buffer} [salt] The password salt, if not supplied a new random salt will be created
- * @returns {PasswordHash}
+ * @returns {Promise<PasswordHash>}
  */
-exports.hashPassword = (password, salt) => {
+exports.hashPassword = async (password, salt) => {
     const binPw = Buffer.from(password, 'latin1');
     const useSalt = salt??crypto.randomBytes(16);
-    const hash = crypto.pbkdf2Sync(binPw, useSalt, 65536, 64, 'sha512');
-
-    return {hash, salt: useSalt};
+    return new Promise((resolve, reject) => {
+        crypto.pbkdf2(binPw, useSalt, 65536, 64, 'sha512',
+            (err, hash) => {
+                if(err !== null)
+                    return reject(err);
+                return resolve({hash, salt: useSalt});
+            });
+    });
 }
 
 /**

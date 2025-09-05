@@ -11,13 +11,17 @@ describe("Session Management", function() {
 
     beforeEach(async function() {
         await masterDB.sync({force: true});
-        const secret = hashPassword("0000.0000");
+        const secret = await hashPassword("0000.0000");
         user = await User.create({
             username: "test",
             password: secret.hash,
             salt: secret.salt,
             level: 5
         });
+    });
+
+    afterEach(() => {
+        SessionManager.shutdown();
     });
 
     this.timeout(5000);

@@ -24,7 +24,7 @@ app.use(`${prefix}/user`, usersRouter);
 // creates default root
 masterDB.sync({force: true})
     .then(() => {
-        console.log("DB INITIALIZED!");
+        app.emit("INIT_DONE");
     });
 
 module.exports = app;
