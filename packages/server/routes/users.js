@@ -8,20 +8,22 @@ const router = express.Router();
 const controller = new UserController();
 
 
-router.get('/', function(req, res, next) {
+router.get('/', async function(req, res, next) {
     if(req.headers.authorization === undefined) // maybe redirect to login page instead
         return res.status(401).json({reason: 'No token!'});
 
-    const token = req.headers.authorization.split(' ')[1];
-    if(token === undefined)
+    const token = /^Bearer ([0-9a-f]{32})$/.exec(req.headers.authorization);
+
+    // TODO: use regex instead
+    if(token === null)
         return res.status(401).json({reason: 'Invalid token!'});
 
-    const userInfo = SessionManager.validateToken(token);
+    const userInfo = SessionManager.validateToken(token[1]);
     if(userInfo === undefined)
-        return res.status(403).json({reason: 'Forbidden'});
+        return res.status(403).json({reason: 'User is not logged in!'});
 
-    return res.send(JSON.stringify(userInfo));
-    // FIXME: Flatten userInfo to string/int values, as values coming from DB are bugging
+    const user = await controller.getById(userInfo.id);
+    return res.status(200).json({username: user.username, level: user.level});
 });
 
 
