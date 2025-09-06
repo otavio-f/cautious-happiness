@@ -33,7 +33,7 @@ SessionManager.prototype.login = async function(username, password, revokeTime){
 
     const token = genRandom('uuid');
     // remove the token after timeout
-    const timeout = setTimeout(() => this.logout(token), revokeTime * 1000);
+    const timeout = setTimeout(() => this.logout(token), (revokeTime??3600) * 1000);
     this.tokens.push({id: user.id, token, timeout});
     return token;
 }
