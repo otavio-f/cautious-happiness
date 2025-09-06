@@ -8,8 +8,8 @@
     "test-all": "mocha -ui bdd packages/*/tests/*",
     "test-bulk-storage": "mocha -ui bdd packages/bulk-storage/tests/*",
     "test-jsff": "mocha -ui bdd packages/jsff/tests/*",
-    "test-server": "mocha -ui bdd packages/server/tests/*",
-    "test-e2e": "echo \"Not implemented yet\""
+    "test-server": "mocha -ui bdd --ignore 'packages/server/tests/routes/*' packages/server/tests/*",
+    "test-e2e": "mocha -ui bdd packages/server/tests/routes/*"
   },
   "keywords": [
     "Collections",
