@@ -121,93 +121,101 @@ const buildAudioModel = async (source) => {
  * @param {StorageManager} bulkStorageManager
  * @constructor
  */
-exports.MediaController = function (bulkStorageManager) {
-    /**
-     * Register a media into the records
-     * @param {User} owner The owner of the media
-     * @param {ReadStream} source The file source
-     * @param {string} mime The mime type of the source
-     * @param {string} [tempDir=env.TEMP_DIR] Directory for storing temporary files
-     * @returns {Promise<Application | Archive | Audio | Image | Text | Video>} the media record
-     */
-    this.store = async (owner, source, mime, tempDir) => {
-        const [mimeType, mimeSubType] = mime.split('/');
-
-        source.pause();
-        const tempFile = saveTempFile(source, tempDir??process.env.TEMP_DIR);
-        const bulkStorage = bulkStorageManager.addFile(source);
-
-        /** @type {Promise<Video|Audio|Image>} */
-        let details;
-        switch(mimeType) {
-            case "audio":
-                details = buildAudioModel(source);
-                break;
-            case "video":
-                details = buildVideoModel(source, tempDir??process.env.TEMP_DIR);
-                break;
-            case "image":
-                details = buildImageModel(source);
-                break;
-            default:
-                throw new Error("Media Control: Unsupported media type!")
-            // TODO: Get details for text, archive and application
-        }
-        source.resume();
-
-        // TODO: Implement Fail event
-        // TODO: Track progress through events:
-        //  (failed to be) added to bulk storage
-        //  copied to temp location
-        //  generated hashes
-        //  created media
-        //  created details
-        const tempFilePath = await tempFile;
-        const record = await bulkStorage;
-        let newMedia = Media.create({
-            uuid: record.uuid,
-            mediaType: mimeType.toLowerCase(),
-            fileType: mimeSubType.toLowerCase(),
-            dateAdded: Date.now(),
-            owner: owner.id
-        });
-
-        const model = await details;
-        model.setMedia(await newMedia);
-
-        fs.rmSync(tempFilePath);
-
-        return model.save();
-    }
-
-    /**
-     * Deletes the media from the database
-     * @param {Buffer} uuid
-     * @returns {Promise<boolean>} true if the media was deleted, otherwise false
-     */
-    this.remove = async (uuid) => {
-        const result = await Media.destroy({
-            where: {uuid}
-        });
-        return (result>0) && bulkStorageManager.delete(uuid);
-    }
-
-    /**
-     * Fetches the file by uuid
-     * @param uuid
-     * @returns {Transform|null}
-     */
-    this.getFile = (uuid) => {
-        return bulkStorageManager.getFile(uuid);
-    }
-
-    /**
-     *
-     * @param filter
-     * @returns {Promise<void>}
-     */
-    this.filterBy = async (filter) => {
-        const all = await Media.findAll();
-        // TODO
-    }
+function MediaController(bulkStorageManager) {
+    /** @type { StorageManager } */
+    Object.defineProperty(this, "storageManager", {
+        value: bulkStorageManager,
+        writable: false
+    });
 }
+
+/**
+ * Register a media into the records
+ * @param {User} owner The owner of the media
+ * @param {ReadStream} source The file source
+ * @param {string} mime The mime type of the source
+ * @param {string} [tempDir=env.TEMP_DIR] Directory for storing temporary files
+ * @returns {Promise<Application | Archive | Audio | Image | Text | Video>} the media record
+ */
+MediaController.prototype.store = async function(owner, source, mime, tempDir) {
+    const [mimeType, mimeSubType] = mime.split('/');
+
+    source.pause();
+    const tempFile = saveTempFile(source, tempDir??process.env.TEMP_DIR);
+    const bulkStorage = this.storageManager.addFile(source);
+
+    /** @type {Promise<Video|Audio|Image>} */
+    let details;
+    switch(mimeType) {
+        case "audio":
+            details = buildAudioModel(source);
+            break;
+        case "video":
+            details = buildVideoModel(source, tempDir??process.env.TEMP_DIR);
+            break;
+        case "image":
+            details = buildImageModel(source);
+            break;
+        default:
+            throw new Error("Media Control: Unsupported media type!")
+        // TODO: Get details for text, archive and application
+    }
+    source.resume();
+
+    // TODO: Implement Fail event
+    // TODO: Track progress through events:
+    //  (failed to be) added to bulk storage
+    //  copied to temp location
+    //  generated hashes
+    //  created media
+    //  created details
+    const tempFilePath = await tempFile;
+    const record = await bulkStorage;
+    let newMedia = Media.create({
+        uuid: record.uuid,
+        mediaType: mimeType.toLowerCase(),
+        fileType: mimeSubType.toLowerCase(),
+        dateAdded: Date.now(),
+        owner: owner.id
+    });
+
+    const model = await details;
+    model.setMedia(await newMedia);
+
+    fs.rmSync(tempFilePath);
+
+    return model.save();
+}
+
+/**
+ * Deletes the media from the database
+ * @param {Buffer} uuid
+ * @returns {Promise<boolean>} true if the media was deleted, otherwise false
+ */
+MediaController.prototype.remove = async function(uuid) {
+    const result = await Media.destroy({
+        where: {uuid}
+    });
+    return (result>0) && this.storageManager.delete(uuid);
+}
+
+/**
+ * Fetches the file by uuid
+ * @param uuid
+ * @returns {Transform|null}
+ */
+MediaController.prototype.getFile = function (uuid) {
+    return this.storageManager.getFile(uuid);
+}
+
+/**
+ *
+ * @param filter
+ * @returns {Promise<void>}
+ */
+MediaController.prototype.filterBy = async function(filter) {
+    const all = await Media.findAll();
+    // TODO
+}
+
+exports.MediaController = MediaController;
