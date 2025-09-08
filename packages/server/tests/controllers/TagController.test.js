@@ -14,20 +14,16 @@ describe('Tag Controller', function() {
     });
 
     it('Creates a tag', async function() {
-        const control = new TagController();
-
-        await control.addTag("deleteme", "meta");
+        await TagController.addTag("deleteme", "meta");
 
         const allTags = await Tag.findAll();
         expect(allTags).to.not.be.empty;
     });
 
     it('Creates many tags', async function() {
-        const control = new TagController();
-
-        await control.addTag("deleteme", "meta");
-        await control.addTag("corrupted", "meta");
-        await control.addTag("photo", "media");
+        await TagController.addTag("deleteme", "meta");
+        await TagController.addTag("corrupted", "meta");
+        await TagController.addTag("photo", "media");
 
         const allTags = await Tag.findAll();
         expect(allTags.length).to.be.equal(3);
@@ -37,12 +33,11 @@ describe('Tag Controller', function() {
     });
 
     it('Deletes a tag', async function() {
-        const control = new TagController();
-        await control.addTag("deleteme", "meta");
-        await control.addTag("corrupted", "meta");
+        await TagController.addTag("deleteme", "meta");
+        await TagController.addTag("corrupted", "meta");
 
         const deleteTag = await Tag.findOne({where: {value: "deleteme"}});
-        const wasRemoved = await control.removeTag(deleteTag.id);
+        const wasRemoved = await TagController.removeTag(deleteTag.id);
 
         expect(wasRemoved).to.be.true;
         const allTags = await Tag.findAll();
@@ -52,13 +47,12 @@ describe('Tag Controller', function() {
     });
 
     it('Deletes a tag and removes orphan namespaces', async function() {
-        const control = new TagController();
-        await control.addTag("deleteme", "meta");
-        await control.addTag("corrupted", "meta");
-        await control.addTag("photo", "media");
+        await TagController.addTag("deleteme", "meta");
+        await TagController.addTag("corrupted", "meta");
+        await TagController.addTag("photo", "media");
 
         const photoTag = await Tag.findOne({where: {value: "photo"}});
-        const wasRemoved = await control.removeTag(photoTag.id);
+        const wasRemoved = await TagController.removeTag(photoTag.id);
 
         expect(wasRemoved).to.be.true;
         const allTags = await Tag.findAll();
@@ -68,13 +62,12 @@ describe('Tag Controller', function() {
     });
 
     it('Changes a tag namespace and removes orphans', async function() {
-        const control = new TagController();
-        await control.addTag("deleteme", "meta");
-        await control.addTag("corrupted", "meta");
-        await control.addTag("photo", "media");
+        await TagController.addTag("deleteme", "meta");
+        await TagController.addTag("corrupted", "meta");
+        await TagController.addTag("photo", "media");
 
         const photoTag = await Tag.findOne({where: {value: "photo"}});
-        await control.changeNamespace(photoTag.id, "meta");
+        await TagController.changeNamespace(photoTag.id, "meta");
 
         const allTags = await Tag.findAll();
         expect(allTags.length).to.be.equal(3);

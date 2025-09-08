@@ -7,14 +7,13 @@ const { SessionManager } = require("../services/SessionManagement.js");
 const router = express.Router();
 const controller = new UserController();
 
-
+/* Users home page */
 router.get('/', async function(req, res, next) {
     if(req.headers.authorization === undefined) // maybe redirect to login page instead
         return res.status(401).json({reason: 'No token!'});
 
     const token = /^Bearer ([0-9a-f]{32})$/.exec(req.headers.authorization);
 
-    // TODO: use regex instead
     if(token === null)
         return res.status(401).json({reason: 'Invalid token!'});
 
@@ -26,7 +25,7 @@ router.get('/', async function(req, res, next) {
     return res.status(200).json({username: user.username, level: user.level});
 });
 
-
+/* login page */
 router.post('/login', async function(req, res, next){
     const data = req.body;
     if(data.username === undefined || data.password === undefined)
@@ -40,9 +39,11 @@ router.post('/login', async function(req, res, next){
         });
 });
 
-
+/* create user page */
 router.post('/create', async function(req, res, next){
     const data = req.body;
+    // TODO: If there's an authentication token, create a privileged
+    //  if not, create an unprivileged user
     if(data.username === undefined || data.password === undefined)
         return res.status(400).json({reason: 'Missing user credentials!'});
     // TODO: Encrypt credentials with public key, decrypt here with private key

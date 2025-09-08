@@ -3,8 +3,9 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const { masterDB } = require('./db/master.js');
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index.js');
+const usersRouter = require('./routes/users.js');
+const tagRouter = require('./routes/tags.js');
 
 const app = express();
 
@@ -17,9 +18,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 const prefix = '/api/v0';
 
 app.use(`${prefix}/`, indexRouter);
+app.use(`${prefix}/user`, usersRouter);
 app.use(`${prefix}/media`, usersRouter);
 app.use(`${prefix}/tag`, usersRouter);
-app.use(`${prefix}/user`, usersRouter);
 
 // creates default root
 masterDB.sync({force: true})
