@@ -1,6 +1,6 @@
 'use strict';
 
-const { Tag, Namespace } = require('../models/tag.js');
+const { Tag} = require('../models/tag.js');
 
 /**
  * @constructor
@@ -11,33 +11,10 @@ function TagController() { }
  *
  * @param {string} value
  * @param {string} namespace
+ * @returns {Promise<Tag>} The created tag
  */
 TagController.addTag = async (value, namespace) => {
-    const [namespaceFound, _] = await Namespace.findOrCreate(
-        {
-            where: {value: namespace},
-            defaults: {value: namespace}
-        });
-
-    await Tag.create({
-            value: value,
-            namespace: namespaceFound.id
-        });
-}
-
-/**
- * Deletes namespace if it has no tags associated
- * @param {number} id The numeric id of the namespace
- */
-const cleanupNamespace = async (id) => {
-    const relatedTags = await Tag.findAll({
-        where: {namespace: id}
-    });
-
-    const isOrphan = (relatedTags.length === 0);
-    if(isOrphan)
-        return await Namespace.destroy({where: {id}});
-    return 0;
+    return await Tag.create({value, namespace});
 }
 
 /**
@@ -46,41 +23,28 @@ const cleanupNamespace = async (id) => {
  * @returns {Promise<boolean>} true if removed the tag, otherwise false
  */
 TagController.removeTag = async (id) => {
-    const tag = await Tag.findByPk(id);
-
-    if(tag === null)
-        return false;
-
-    const namespaceID = (await tag.getNamespace()).id;
-    await Tag.destroy({
-        where: {id: tag.id}
+    const result = await Tag.destroy({
+        where: {id}
     });
 
-    await cleanupNamespace(namespaceID);
-
-    return true;
+    return result > 0;
 }
 
 /**
  *
  * @param {number} id
+ * @param {string} value
  * @param {string} namespace
  * @returns {Promise<void>}
  */
-TagController.changeNamespace = async (id, namespace) => {
+TagController.change = async (id, value, namespace) => {
     const tag = await Tag.findByPk(id);
     if(tag === null)
         throw new Error(`TagController: Tag with id ${id} not found!`);
 
-    const oldNamespace = await tag.getNamespace();
-    const [namespaceFound, _] = await Namespace.findOrCreate(
-        {
-            where: {value: namespace},
-            defaults: {value: namespace}
-        });
-    tag.setNamespace(namespaceFound.id);
+    tag.value = value;
+    tag.namespace = namespace;
     await tag.save();
-    await cleanupNamespace(oldNamespace.id);
 }
 
 /** @typedef {{id: number, value: string, namespace: string}} TagObject */

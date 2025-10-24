@@ -1,20 +1,40 @@
 'use strict';
 
 const express = require('express');
-const {SessionManager} = require("../services/SessionManagement.js");
+const {userauth} = require("../middleware/userauth.js");
+const {TagController} = require("../controllers/TagController");
+
 const router = express.Router();
+const controller = TagController;
 
+// this route needs authentication
+router.use(userauth);
 
-/* Tags home */
+/* Create - post */
+router.post('/', async (req, res) => {
+  const data = req.body;
+  if(data.tag === undefined)
+    return req.status(400).json({reason: "Missing tag parameter"});
+
+  const tag = TagController.addTag(data.tag);
+});
+
+/* Search - post */
+router.post('/search', async (req, res) => {
+
+});
+
+/* Update - put */
+router.put('/', async (req, res) => {
+
+});
+
+/* Delete - delete */
+router.delete('/', async (req, res) => {
+
+});
+
+/* Tags home - search for a tag */
 router.get('/', async (req, res) => {
-    if(req.headers.authorization === undefined) // maybe redirect to login page instead
-        return res.status(401).json({reason: 'No token!'});
-
-    const token = /^Bearer ([0-9a-f]{32})$/.exec(req.headers.authorization);
-
-    if(token === null)
-        return res.status(401).json({reason: 'Invalid token!'});
-
-    const userInfo = SessionManager.validateToken(token[1]);
 
 });

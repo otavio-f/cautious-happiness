@@ -30,11 +30,8 @@ router.post('/login', async function(req, res, next){
 /* create user page */
 router.post('/create', async function(req, res, next){
     const data = req.body;
-    // TODO: If there's an authentication token, create a privileged
-    //  if not, create an unprivileged user
     if(data.username === undefined || data.password === undefined)
         return res.status(400).json({reason: 'Missing user credentials!'});
-    // TODO: Encrypt credentials with public key, decrypt here with private key
     return controller.create(data.username, data.password)
         .then(user => {
             return res.status(201).json({result: user.username});

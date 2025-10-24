@@ -5,7 +5,7 @@ process.env.NODE_ENV = 'dev';
 const { expect} = require('chai');
 const { TagController } = require('../../controllers/TagController.js');
 const { masterDB } = require('../../db/master.js');
-const { Tag, Namespace } = require('../../models/tag.js');
+const { Tag } = require('../../models/tag.js');
 
 
 describe('Tag Controller', function() {
@@ -14,10 +14,12 @@ describe('Tag Controller', function() {
     });
 
     it('Creates a tag', async function() {
-        await TagController.addTag("deleteme", "meta");
+        const tag = await TagController.addTag("deleteme", "meta");
 
         const allTags = await Tag.findAll();
         expect(allTags).to.not.be.empty;
+        expect(tag.value).to.equal("deleteme");
+        expect(tag.namespace).to.equal("meta");
     });
 
     it('Creates many tags', async function() {
@@ -27,9 +29,17 @@ describe('Tag Controller', function() {
 
         const allTags = await Tag.findAll();
         expect(allTags.length).to.be.equal(3);
+    });
 
-        const allNamespaces = await Namespace.findAll();
-        expect(allNamespaces.length).to.be.equal(2);
+    it('Refuses to create a duplicate tag', async function() {
+        await TagController.addTag("deleteme", "meta");
+        await TagController.addTag("deleteme", "meta")
+          .then(() => fail("Shouldn't be able to create a duplicate tag"))
+          .catch(async (err) => {
+              expect(err.name).equal("SequelizeUniqueConstraintError");
+              const allTags = await Tag.findAll();
+              expect(allTags.length).to.be.equal(1);
+          });
     });
 
     it('Deletes a tag', async function() {
@@ -42,36 +52,41 @@ describe('Tag Controller', function() {
         expect(wasRemoved).to.be.true;
         const allTags = await Tag.findAll();
         expect(allTags.length).to.be.equal(1);
-        const allNamespaces = await Namespace.findAll();
-        expect(allNamespaces.length).to.be.equal(1);
     });
 
-    it('Deletes a tag and removes orphan namespaces', async function() {
+    it('Changes a tag namespace', async function() {
         await TagController.addTag("deleteme", "meta");
         await TagController.addTag("corrupted", "meta");
         await TagController.addTag("photo", "media");
 
         const photoTag = await Tag.findOne({where: {value: "photo"}});
-        const wasRemoved = await TagController.removeTag(photoTag.id);
-
-        expect(wasRemoved).to.be.true;
-        const allTags = await Tag.findAll();
-        expect(allTags.length).to.be.equal(2);
-        const allNamespaces = await Namespace.findAll();
-        expect(allNamespaces.length).to.be.equal(1);
-    });
-
-    it('Changes a tag namespace and removes orphans', async function() {
-        await TagController.addTag("deleteme", "meta");
-        await TagController.addTag("corrupted", "meta");
-        await TagController.addTag("photo", "media");
-
-        const photoTag = await Tag.findOne({where: {value: "photo"}});
-        await TagController.changeNamespace(photoTag.id, "meta");
+        await TagController.change(photoTag.id, "photo", "meta");
 
         const allTags = await Tag.findAll();
         expect(allTags.length).to.be.equal(3);
-        const allNamespaces = await Namespace.findAll();
-        expect(allNamespaces.length).to.be.equal(1);
+    });
+
+    it('Changes a tag value', async function() {
+        await TagController.addTag("deleteme", "meta");
+        await TagController.addTag("corrupted", "meta");
+        await TagController.addTag("photo", "media");
+
+        const photoTag = await Tag.findOne({where: {value: "photo"}});
+        await TagController.change(photoTag.id, "video", "media");
+
+        const allTags = await Tag.findAll();
+        expect(allTags.length).to.be.equal(3);
+    });
+
+    it('Refuses to change a tag that causes duplicate', async function() {
+        await TagController.addTag("deleteme", "meta");
+        const tag = await TagController.addTag("corrupted", "meta");
+
+        // tries to change second tag into first
+        await TagController.change(tag.id, "deleteme", "meta")
+          .then(() => fail("It shouldn't be allowed to create a duplicate."))
+          .catch((err) => {
+              expect(err.name).equal("SequelizeUniqueConstraintError");
+          });
     });
 });
