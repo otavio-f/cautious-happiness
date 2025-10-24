@@ -3,26 +3,14 @@
 const express = require('express');
 const { UserController } = require('../controllers/UserController.js');
 const { SessionManager } = require("../services/SessionManagement.js");
+const { userauth } = require("../middleware/userauth.js");
 
 const router = express.Router();
 const controller = new UserController();
 
 /* Users home page */
-router.get('/', async function(req, res, next) {
-    if(req.headers.authorization === undefined) // maybe redirect to login page instead
-        return res.status(401).json({reason: 'No token!'});
-
-    const token = /^Bearer ([0-9a-f]{32})$/.exec(req.headers.authorization);
-
-    if(token === null)
-        return res.status(401).json({reason: 'Invalid token!'});
-
-    const userInfo = SessionManager.validateToken(token[1]);
-    if(userInfo === undefined)
-        return res.status(403).json({reason: 'User is not logged in!'});
-
-    const user = await controller.getById(userInfo.id);
-    return res.status(200).json({username: user.username, level: user.level});
+router.get('/', userauth, async function(req, res, next) {
+    return res.status(200).json({username: req.user.username, level: req.user.level});
 });
 
 /* login page */

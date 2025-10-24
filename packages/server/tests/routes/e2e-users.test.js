@@ -72,7 +72,7 @@ describe('/api/v0/user endpoint', function() {
             .set('Accept', 'application/json')
             .set('Authorization', `Auth ${token}`);
 
-        expect(response.status).equals(401);
+        expect(response.status).equals(400);
         expect(response.body).deep.equals({reason: 'Invalid token!'});
     });
 
@@ -85,7 +85,7 @@ describe('/api/v0/user endpoint', function() {
             .get('/api/v0/user/')
             .set('Accept', 'application/json');
 
-        expect(response.status).equals(401);
+        expect(response.status).equals(400);
         expect(response.body).deep.equals({reason: 'No token!'});
     });
 
@@ -97,7 +97,7 @@ describe('/api/v0/user endpoint', function() {
             .set('Accept', 'application/json')
             .set('Authorization', `Bearer ${token}`);
 
-        expect(response.status).equals(403);
+        expect(response.status).equals(401);
         expect(response.body).deep.equals({reason: 'User is not logged in!'});
     });
 })
